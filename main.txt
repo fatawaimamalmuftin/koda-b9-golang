@@ -1,0 +1,69 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// manifest
+	var hallo string 
+	hallo = "hallo"
+	fmt.Println(hallo)
+	hallo = "word"
+	fmt.Println(hallo)
+	word:="word hello"
+	fmt.Println(word)
+
+	fmt.Println("hallo")
+	fmt.Println("word")
+	//aritmatika-------------------------
+
+	var a int8 = 1
+	var b uint8 = 2
+	c:= uint8(a) + b
+
+	// kondisi if
+	if c > 5 {
+		fmt.Println("hore")
+	}else{
+		fmt.Println("reho")
+	}
+
+	// kondisi swich
+	switch true {
+		case c > 5:
+			fmt.Println("hore")
+		case c > 2:
+			fmt.Println("reho")
+		default:
+			fmt.Println("error")
+	}
+
+	res := printTwoDecimalSFloat(1.2375)
+	fmt.Println(res)
+
+	add, sub := addnSub(2,1)
+	fmt.Println(add)
+	fmt.Println(sub)
+
+	// great("muftin")
+}
+
+// func great(name string){
+// 	fmt.Sprintf("hello %s", name)
+// }
+
+// func great(name string){
+// 	fmt.Println(fmt.Sprintf("hello %s", name))
+// }
+
+func printTwoDecimalSFloat(num float64) string{
+	result := fmt.Sprintf("hasil: %.2f", num)
+	return result
+}
+
+func addnSub(a int8, b int8)(resultAdd int16,resultSub int8){
+	resultAdd = int16(a+b)
+	resultSub = int8(a-b)
+	return resultAdd, resultSub
+}

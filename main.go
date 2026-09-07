@@ -1,41 +1,32 @@
 package main
 
-import (
-	"fmt"
-)
-
+import "fmt"
 func main() {
-	// manifest
-	var hallo string 
-	hallo = "hallo"
-	fmt.Println(hallo)
-	hallo = "word"
-	fmt.Println(hallo)
-	word:="word hello"
-	fmt.Println(word)
+	luas := luas(5,10)
+	fmt.Println(luas)
 
-	fmt.Println("hallo")
-	fmt.Println("word")
-	//aritmatika-------------------------
+	keliling := keliling(5,10)
+	fmt.Println(keliling)
 
-	var a int8 = 1
-	var b uint8 = 2
-	c:= uint8(a) + b
+	K,L := LnK(5,10)
+	fmt.Println(K,L)
+}
 
-	// kondisi if
-	if c > 5 {
-		fmt.Println("hore")
-	}else{
-		fmt.Println("reho")
-	}
+// rumus luas : panjang x lebar
+func luas(panjang uint8, lebar uint8) (luas uint8){
+	luas = panjang * lebar
+	return luas
+}
 
-	// kondisi swich
-	switch true {
-		case c > 5:
-			fmt.Println("hore")
-		case c > 2:
-			fmt.Println("reho")
-		default:
-			fmt.Println("error")
-	}
+//rumus keliling : 2 x (panjang x lebar)
+func keliling(panjang uint8, lebar uint8) (keliling uint8){
+	keliling = 2 * (panjang * lebar)
+	return keliling	
+}
+
+// keliling dan lebar
+func LnK(panjang uint8, lebar uint8)(K uint8, L uint8){
+	K = keliling(5,10)
+	L = luas(5,10)
+	return K, L
 }
