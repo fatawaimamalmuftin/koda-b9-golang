@@ -1,8 +1,5 @@
 package main
 
-import "fmt"
-
-
 func main() {
 	// luas(5,10)
 	// keliling(5,10)
@@ -14,16 +11,15 @@ func main() {
 	// 	return
 	// }
 	
-	result := insertArry([]int{50, 75, 66, 20, 32, 90})
-
-	for _,v := range result{
-		fmt.Println(v)
-	}
+	// result := insertArry([]int{50, 75, 66, 20, 32, 90})
+	// for _,v := range result{
+	// 	fmt.Println(v)
+	// }
 }
 
-func insertArry(arryNum []int) []int{
-	return append(arryNum[:3], append([]int{88}, arryNum[3:]...)...)
-}
+// func insertArry(arryNum []int) []int{
+// 	return append(arryNum[:3], append([]int{88}, arryNum[3:]...)...)
+// }
 
 // for i, v := range arryNum {
 // 	if v == 66 {
