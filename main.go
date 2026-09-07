@@ -1,39 +1,51 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
 
 func main() {
 	// luas(5,10)
 	// keliling(5,10)
 	// K,L := LnK(5,10)
 	// fmt.Printf("hasil keliling persegi: %d\nhasil luas persegi: %d\n", K, L)
-	err := buildWindow(5)
-	if err != nil{
-		fmt.Printf("error : %s", err)
-		return
+	// err := buildWindow(5)
+	// if err != nil{
+	// 	fmt.Printf("error : %s", err)
+	// 	return
+	// }
+	
+	result := insertArry([]int{50, 75, 66, 20, 32, 90})
+
+	for _,v := range result{
+		fmt.Println(v)
 	}
 }
 
-func buildWindow(window uint8) error{
-	if window < 5 {
-		return fmt.Errorf("window must be at least 5")
-	}
-
-	for vertical := uint8(0); vertical < window; vertical++ {
-		for horizontal := uint8(0); horizontal < window; horizontal++ {
-			if vertical == 0 || vertical == window-1 || horizontal == 0 || horizontal == window-1 {
-				fmt.Printf("* ")
-			} else {
-				fmt.Printf("  ")
-			}
-		}
-		fmt.Println()
-	}
-
-	return nil
+func insertArry(arryNum []int) []int{
+	return append(arryNum[:3], append([]int{88}, arryNum[3:]...)...)
 }
+
+// for i, v := range arryNum {
+// 	if v == 66 {
+// 		arryNum = append(arryNum[:i], append([]int{88}, arryNum[i:]...)...)
+// 	}
+// }
+
+// func buildWindow(window uint8) error{
+// 	if window < 5 {
+// 		return fmt.Errorf("window must be at least 5")
+// 	}
+
+// 	for vertical := uint8(0); vertical < window; vertical++ {
+// 		for horizontal := uint8(0); horizontal < window; horizontal++ {
+// 			if vertical == 0 || vertical == window-1 || horizontal == 0 || horizontal == window-1 {
+// 				fmt.Printf("* ")
+// 			} else {
+// 				fmt.Printf("  ")
+// 			}
+// 		}
+// 		fmt.Println()
+// 	}
 
 // rumus luas : panjang x lebar
 // func luas(panjang uint8, lebar uint8) uint8 {
