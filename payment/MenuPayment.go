@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Payment(){
+func MenuPayment(){
 	for{
 		fmt.Println()
 		fmt.Println("========================================")
@@ -15,6 +15,9 @@ func Payment(){
 		fmt.Println(" 0. Kembali ke menu utama")
 		fmt.Println("========================================")
 
-		AskPayment()
+		if AskPayment() {
+			return
+		}
+		
 	}
 }

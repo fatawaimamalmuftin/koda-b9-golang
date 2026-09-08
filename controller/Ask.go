@@ -9,6 +9,7 @@ import (
 
 	choice "github.com/fatawaimamalmuftin/koda-b9-golang/controller/choice"
 	"github.com/fatawaimamalmuftin/koda-b9-golang/internal/model"
+	"github.com/fatawaimamalmuftin/koda-b9-golang/payment"
 )
 
 func Ask() {
@@ -96,7 +97,12 @@ func Ask() {
 		choice.Minitask6(filePath)
 
 	case "8":
+		model.Clear()
 		choice.Minitask7()
+
+	case "9":
+		model.Clear()
+		payment.MenuPayment()
 		
 	case "0": 
 		model.Clear() 
@@ -109,6 +115,6 @@ func Ask() {
 		model.Clear() 
 		fmt.Println("--------------------------------------------") 
 		fmt.Println(" Menu tidak tersedia!") 
-		fmt.Println(" Silakan pilih menu 0 - 6.") 
+		fmt.Println(" Silakan pilih menu 1 - 9 dan 0 untuk exit.") 
 		fmt.Println("--------------------------------------------") }
 }
