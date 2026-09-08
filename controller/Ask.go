@@ -88,6 +88,12 @@ func Ask() {
 		fmt.Println("--------------- INSERT ARRAY ---------------") 
 		result := choice.InsertArry( []int{50, 75, 66, 20, 32, 90}, 88, ) 
 		fmt.Printf("Hasil Array : %v\n", result) 
+
+	case "7":
+		fmt.Print("File path -> ")
+		filePath,_ := reader.ReadString('\n')
+		filePath = strings.TrimSpace(filePath)
+		choice.Minitask6(filePath)
 		
 	case "0": 
 		fmt.Println() 

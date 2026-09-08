@@ -18,6 +18,7 @@ func RenderMainMenu() {
 		fmt.Println(" 4. Hitung Keliling & Luas")
 		fmt.Println(" 5. Build Window")
 		fmt.Println(" 6. Insert Array")
+		fmt.Println(" 7. Insert Array")
 		fmt.Println(" 0. Keluar")
 		fmt.Println("========================================")
 
