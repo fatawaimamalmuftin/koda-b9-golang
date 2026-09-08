@@ -15,6 +15,7 @@ func MenuCheckout(){
 		fmt.Println("========================================")
 		fmt.Println(" 1. Bank")
 		fmt.Println(" 2. Online")
+		fmt.Println(" 3. Show all checout")
 		fmt.Println(" 0. Kembali ke menu utama")
 		fmt.Println("========================================")
 

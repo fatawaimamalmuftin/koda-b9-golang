@@ -12,6 +12,9 @@ import (
 func AskCheckout() bool{
 	reader := bufio.NewReader(os.Stdin)
 
+	bank := Bank{}
+	online := Online{}
+
 	fmt.Print(" Pilih metode pembayaran -> ")
 	input,_ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
@@ -19,9 +22,15 @@ func AskCheckout() bool{
 	switch input {
 	case "1":
 		model.Clear()
-
+		TransactionCheck(bank)
+		
 	case "2":
 		model.Clear()
+		TransactionCheck(online)
+	
+	case "3":
+		model.Clear()
+		ShowTransaction()
 
 	case "0":
 		model.Clear()
