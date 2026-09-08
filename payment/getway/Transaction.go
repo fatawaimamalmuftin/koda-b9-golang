@@ -29,8 +29,6 @@ func TypePaymen(InterTrans InterTrans) string{
 	return InterTrans.Pay()
 }
 
-
-
 func Transaction(paymentType InterTrans) {
 	price := []int{12000, 13000, 14000}
 	random := price[rand.Intn(3)]
