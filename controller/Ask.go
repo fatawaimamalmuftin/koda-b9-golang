@@ -94,6 +94,9 @@ func Ask() {
 		filePath,_ := reader.ReadString('\n')
 		filePath = strings.TrimSpace(filePath)
 		choice.Minitask6(filePath)
+
+	case "8":
+		choice.Minitask7()
 		
 	case "0": 
 		fmt.Println() 
