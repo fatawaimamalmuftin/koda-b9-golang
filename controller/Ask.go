@@ -67,5 +67,9 @@ func Ask() {
 		hasilKeliling, hasilLuas := choice.LnK(uint8(panjang), uint8(lebar))
 
 		fmt.Printf("Keliling dan Luas Persegi panjang ada lah : Keliling=%d, Luas=%d\n", hasilKeliling, hasilLuas)
+
+	case "0":
+		fmt.Println("Program selesai...")
+		os.Exit(0)
 	}
 }
