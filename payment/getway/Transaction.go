@@ -21,7 +21,7 @@ func (b Bank) Pay() string{
 }
 
 type Online struct {}
-func (O Online) Pay() string{
+func (o Online) Pay() string{
 	return "Online"
 }
 
