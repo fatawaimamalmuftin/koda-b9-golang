@@ -56,10 +56,14 @@ func Minitask7(){
 
 	person := NewPerson(name,addr,notel)
 	person.Greet()
-
+	
+	fmt.Println(person)
+	
 	fmt.Print("Masukan Nama baru : ")
 	newName,_ := reader.ReadString('\n')
 	newName = strings.TrimSpace(newName)
 
 	person.SetPerson(newName)
+
+	fmt.Println(person)
 }
