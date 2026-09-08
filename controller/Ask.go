@@ -71,5 +71,8 @@ func Ask() {
 	case "0":
 		fmt.Println("Program selesai...")
 		os.Exit(0)
+
+	default:
+		fmt.Println("Menu tidak tersedia")
 	}
 }
