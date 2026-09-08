@@ -10,6 +10,10 @@ func RenderMainMenu(){
 	for{
 		fmt.Println("===== Main Menu =====")
 		fmt.Println("1. Biodata Diri")
+		fmt.Println("2. Hitung Keliling Persegi Panjang")
+		fmt.Println("3. Hitung Luas Persegi Panjang")
+		fmt.Println("4. Hitung Keliling dan Luas Persegi Panjang")
+
 		controller.Ask()
 	}
 }

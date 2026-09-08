@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 
 	choice "github.com/fatawaimamalmuftin/koda-b9-golang/controller/choice"
@@ -21,5 +22,50 @@ func Ask() {
 	switch input {
 	case "1":
 		choice.Build()
+
+	case "2":
+		fmt.Print("Masukan Panjang -> ")
+		p, _ := reader.ReadString('\n')
+		p = strings.TrimSpace(p)
+		panjang, _ := strconv.Atoi(p)
+
+		fmt.Print("Masukan Luas -> ")
+		L, _ := reader.ReadString('\n')
+		L = strings.TrimSpace(L)
+		lebar, _ := strconv.Atoi(L)
+
+		hasilKeliling := choice.Keliling(uint8(panjang), uint8(lebar))
+
+		fmt.Printf("Keliling Persegi panjang ada lah : %d\n", hasilKeliling)
+
+	case "3":
+		fmt.Print("Masukan Panjang -> ")
+		p, _ := reader.ReadString('\n')
+		p = strings.TrimSpace(p)
+		panjang, _ := strconv.Atoi(p)
+
+		fmt.Print("Masukan Luas -> ")
+		L, _ := reader.ReadString('\n')
+		L = strings.TrimSpace(L)
+		lebar, _ := strconv.Atoi(L)
+
+		hasilLuas := choice.Luas(uint8(panjang), uint8(lebar))
+
+		fmt.Printf("Luas Persegi panjang ada lah : %d\n", hasilLuas)
+
+	case "4":
+		fmt.Print("Masukan Panjang -> ")
+		p, _ := reader.ReadString('\n')
+		p = strings.TrimSpace(p)
+		panjang, _ := strconv.Atoi(p)
+
+		fmt.Print("Masukan Luas -> ")
+		L, _ := reader.ReadString('\n')
+		L = strings.TrimSpace(L)
+		lebar, _ := strconv.Atoi(L)
+
+		hasilKeliling, hasilLuas := choice.LnK(uint8(panjang), uint8(lebar))
+
+		fmt.Printf("Keliling dan Luas Persegi panjang ada lah : Keliling=%d, Luas=%d\n", hasilKeliling, hasilLuas)
 	}
 }
