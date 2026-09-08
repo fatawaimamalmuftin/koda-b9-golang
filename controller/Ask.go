@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	choice "github.com/fatawaimamalmuftin/koda-b9-golang/controller/choice"
+	"github.com/fatawaimamalmuftin/koda-b9-golang/internal/model"
 )
-
 
 func Ask() {
 	reader := bufio.NewReader(os.Stdin)
@@ -20,12 +20,12 @@ func Ask() {
 
 	switch input {
 	case "1":
-		fmt.Println()
+		model.Clear()
 		fmt.Println("---------- BIODATA DIRI ----------")
 		choice.Build()
 	
 	case "2":
-		fmt.Println()
+		model.Clear()
 		fmt.Println("------------- HITUNG KELILING -------------")
 		fmt.Print("Masukkan Panjang -> ")
 		p, _ := reader.ReadString('\n')
@@ -40,7 +40,7 @@ func Ask() {
 		fmt.Printf("Keliling Persegi Panjang : %d\n", hasilKeliling) 
 		
 	case "3": 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("--------------- HITUNG LUAS ----------------") 
 		fmt.Print("Masukkan Panjang -> ") 
 		p, _ := reader.ReadString('\n') 
@@ -55,7 +55,7 @@ func Ask() {
 		fmt.Printf("Luas Persegi Panjang : %d\n", hasilLuas)
 	
 	case "4": 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("---------- HITUNG KELILING & LUAS ----------") 
 		fmt.Print("Masukkan Panjang -> ")
 		p, _ := reader.ReadString('\n')
@@ -71,7 +71,7 @@ func Ask() {
 		fmt.Printf("Luas : %d\n", hasilLuas)
 	
 	case "5": 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("--------------- BUILD WINDOW ---------------") 
 		fmt.Print("Masukkan Luas Window -> ") 
 		L, _ := reader.ReadString('\n') 
@@ -84,7 +84,7 @@ func Ask() {
 		fmt.Println("Window berhasil dibuat!") 
 		
 	case "6": 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("--------------- INSERT ARRAY ---------------") 
 		result := choice.InsertArry( []int{50, 75, 66, 20, 32, 90}, 88, ) 
 		fmt.Printf("Hasil Array : %v\n", result) 
@@ -99,14 +99,14 @@ func Ask() {
 		choice.Minitask7()
 		
 	case "0": 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("========================================") 
 		fmt.Println(" Terima kasih sudah mencoba! ") 
 		fmt.Println("========================================") 
 		os.Exit(0) 
 		
 	default: 
-		fmt.Println() 
+		model.Clear() 
 		fmt.Println("--------------------------------------------") 
 		fmt.Println(" Menu tidak tersedia!") 
 		fmt.Println(" Silakan pilih menu 0 - 6.") 
