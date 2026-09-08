@@ -4,13 +4,15 @@ import (
 	"fmt"
 
 	"github.com/fatawaimamalmuftin/koda-b9-golang/controller"
+	"github.com/fatawaimamalmuftin/koda-b9-golang/internal/model"
 )
 
 func RenderMainMenu() {
+	model.Clear()
 	for {
 		fmt.Println()
 		fmt.Println("========================================")
-		fmt.Println(" PROGRAM PERSEGI PANJANG")
+		fmt.Println(" MENU UTAMA ")
 		fmt.Println("========================================")
 		fmt.Println(" 1. Build Persegi Panjang")
 		fmt.Println(" 2. Hitung Keliling")
