@@ -16,7 +16,7 @@ func Minitask6(path string) {
 	read, err := os.Open(path)
 
 	if err != nil {
-		fmt.Println("error os.open", err)
+		fmt.Println("error os.open :", err)
 		return
 	}
 	defer func(){
