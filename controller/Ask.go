@@ -68,6 +68,21 @@ func Ask() {
 
 		fmt.Printf("Keliling dan Luas Persegi panjang ada lah : Keliling=%d, Luas=%d\n", hasilKeliling, hasilLuas)
 
+	case "5":
+		fmt.Print("Masukan Luas Window -> ")
+		L, _ := reader.ReadString('\n')
+		L = strings.TrimSpace(L)
+
+		lebar, _ := strconv.Atoi(L)
+
+		window := choice.BuildWindow(uint8(lebar))
+		if window != nil{
+			fmt.Printf("error : %s\n", window)
+			return
+		}
+
+		fmt.Println(window)
+
 	case "0":
 		fmt.Println("Program selesai...")
 		os.Exit(0)
