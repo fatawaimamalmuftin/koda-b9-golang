@@ -1,4 +1,4 @@
-package payment
+package checkout
 
 import (
 	"bufio"
@@ -7,11 +7,9 @@ import (
 	"strings"
 
 	"github.com/fatawaimamalmuftin/koda-b9-golang/internal/model"
-	"github.com/fatawaimamalmuftin/koda-b9-golang/payment/checkout"
-	"github.com/fatawaimamalmuftin/koda-b9-golang/payment/getway"
 )
 
-func AskPayment() bool{
+func AskCheckout() bool{
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Print(" Pilih metode pembayaran -> ")
@@ -21,11 +19,9 @@ func AskPayment() bool{
 	switch input {
 	case "1":
 		model.Clear()
-		getway.MenuGetWay()
 
 	case "2":
 		model.Clear()
-		checkout.MenuCheckout()
 
 	case "0":
 		model.Clear()

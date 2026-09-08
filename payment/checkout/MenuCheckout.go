@@ -1,4 +1,4 @@
-package payment
+package checkout
 
 import (
 	"fmt"
@@ -6,19 +6,19 @@ import (
 	"github.com/fatawaimamalmuftin/koda-b9-golang/internal/model"
 )
 
-func MenuPayment(){
+func MenuCheckout(){
 	model.Clear()
 	for{
 		fmt.Println()
 		fmt.Println("========================================")
-		fmt.Println(" PAYMENT ")
+		fmt.Println(" Metode Pembayaran Checkout ")
 		fmt.Println("========================================")
-		fmt.Println(" 1. Getway Payment")
-		fmt.Println(" 2. ChecOut")
+		fmt.Println(" 1. Bank")
+		fmt.Println(" 2. Online")
 		fmt.Println(" 0. Kembali ke menu utama")
 		fmt.Println("========================================")
 
-		if AskPayment() {
+		if AskCheckout() {
 			return
 		}
 		
