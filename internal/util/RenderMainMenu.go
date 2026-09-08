@@ -14,6 +14,7 @@ func RenderMainMenu(){
 		fmt.Println("3. Hitung Luas Persegi Panjang")
 		fmt.Println("4. Hitung Keliling dan Luas Persegi Panjang")
 		fmt.Println("5. Build Window")
+		fmt.Println("6. Minitask 3")
 		fmt.Println("0. Exit")
 
 		controller.Ask()

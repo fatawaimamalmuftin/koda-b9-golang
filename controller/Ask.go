@@ -83,6 +83,10 @@ func Ask() {
 
 		fmt.Println(window)
 
+	case "6":
+		result := choice.InsertArry([]int{50, 75, 66, 20, 32, 90}, 88)
+		fmt.Println(result)
+
 	case "0":
 		fmt.Println("Program selesai...")
 		os.Exit(0)

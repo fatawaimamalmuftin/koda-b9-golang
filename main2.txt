@@ -17,15 +17,7 @@ func main() {
 	// }
 }
 
-// func insertArry(arryNum []int) []int{
-// 	return append(arryNum[:3], append([]int{88}, arryNum[3:]...)...)
-// }
 
-// for i, v := range arryNum {
-// 	if v == 66 {
-// 		arryNum = append(arryNum[:i], append([]int{88}, arryNum[i:]...)...)
-// 	}
-// }
 
 // func buildWindow(window uint8) error{
 // 	if window < 5 {
