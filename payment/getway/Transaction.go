@@ -39,27 +39,40 @@ func Transaction(paymentType InterTrans) {
 
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println()
-	fmt.Println("========================================")
-	fmt.Println("          DETAIL PEMBAYARAN")
-	fmt.Println("========================================")
-	fmt.Printf(" Metode Pembayaran : %s\n", typePaymen)
-	fmt.Printf(" Total Pembayaran   : Rp%d\n", random)
-	fmt.Println("========================================")
-
-	fmt.Print(" Masukan Nominal yang sama : ")
-	payment, _ := reader.ReadString('\n')
-	payment = strings.TrimSpace(payment)
-
-	if payment == strconv.Itoa(random) {
-		model.Clear()
+	for {
 		fmt.Println()
 		fmt.Println("========================================")
-		fmt.Println("          PEMBAYARAN BERHASIL")
+		fmt.Println("          DETAIL PEMBAYARAN")
 		fmt.Println("========================================")
-		fmt.Printf(" Metode : %s\n", typePaymen)
-		fmt.Printf(" Nominal : Rp%s\n", payment)
-		fmt.Println(" Status  : SUCCESS")
+		fmt.Printf(" Metode Pembayaran : %s\n", typePaymen)
+		fmt.Printf(" Total Pembayaran   : Rp%d\n", random)
+		fmt.Println("========================================")
+
+		fmt.Print(" Masukan Nominal yang sama : ")
+		payment, _ := reader.ReadString('\n')
+		payment = strings.TrimSpace(payment)
+
+		if payment == strconv.Itoa(random) {
+			model.Clear()
+
+			fmt.Println()
+			fmt.Println("========================================")
+			fmt.Println("          PEMBAYARAN BERHASIL")
+			fmt.Println("========================================")
+			fmt.Printf(" Metode : %s\n", typePaymen)
+			fmt.Printf(" Nominal : Rp%s\n", payment)
+			fmt.Println(" Status  : SUCCESS")
+			fmt.Println("========================================")
+			fmt.Println()
+
+			return
+		}
+
+		fmt.Println()
+		fmt.Println("========================================")
+		fmt.Println("          PEMBAYARAN GAGAL")
+		fmt.Println("========================================")
+		fmt.Println(" Nominal kurang, silahkan input ulang.")
 		fmt.Println("========================================")
 		fmt.Println()
 	}
