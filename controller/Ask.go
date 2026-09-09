@@ -103,6 +103,10 @@ func Ask() {
 	case "9":
 		model.Clear()
 		payment.MenuPayment()
+
+	case "10":
+		model.Clear()
+		choice.Minitask9()
 		
 	case "0": 
 		model.Clear() 

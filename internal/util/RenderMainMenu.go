@@ -23,6 +23,7 @@ func RenderMainMenu() {
 		fmt.Println(" 7. Minitask 6")
 		fmt.Println(" 8. Minitask 7")
 		fmt.Println(" 9. Payment ")
+		fmt.Println(" 10. Go Routine ")
 		fmt.Println(" 0. Keluar")
 		fmt.Println("========================================")
 
