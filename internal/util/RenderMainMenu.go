@@ -24,6 +24,7 @@ func RenderMainMenu() {
 		fmt.Println(" 8. Minitask 7")
 		fmt.Println(" 9. Payment ")
 		fmt.Println(" 10. Go Routine ")
+		fmt.Println(" 11. Channel")
 		fmt.Println(" 0. Keluar")
 		fmt.Println("========================================")
 

@@ -107,6 +107,10 @@ func Ask() {
 	case "10":
 		model.Clear()
 		choice.Minitask9()
+
+	case "11":
+		model.Clear()
+		choice.WhiteBoard()		
 		
 	case "0": 
 		model.Clear() 
